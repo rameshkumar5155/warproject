@@ -1,0 +1,2467 @@
+2 Hours
+2 Hours
+2 Hours
+2 Hours
+2 Hours
+2 Hours
+1 hour 30 minutes         (Due to power off)   
+1 Hour
+2 Hours
+2 Hours
+2 Hours
+2 Hours
+2 Hours
+3 Hours
+2 Hours 30 Minutes
+3 Hours 
+2 Hours 30 Minutes
+2 Hours 45 Minutes
+2 Hours 
+2 Hours 
+2 Hours 
+-----------------------------
+Till 02-09-2021   (Thursday)
+-----------------------------
+44 Hours 15 Minutes
+-----------------------------
+
+_____________________________________________________________________________________________________________________________________
+01-09-2021(Wednesday):
+=====================
+Q: 172 .X.X.X B class ?
+Q: how we calculating the default /16 and /20.
+Q: If possible please touch base redshift DB
+Q: 1 q can you please explain HOST zone
+   Will cover in project
+Issue: Status : Failure -Test failed: IO Error: The Network Adapter could not establish the connection 
+                (CONNECTION_ID=cbJwAHGARTKyYr+K71b2Yw==)
+Q: Could you please walk through the ready template ?
+   We will conver in project
+Q: Can u explain about kernals and splunk sir
+Q: what is dforeground?
+Q: Differnce between Poll SCM & GitHub hook trigger for GITScm polling.
+Q: sir only cost of resources only differ from docker or any thing else what about perfomances
+   Many more things
+
+-------------------------------------------------------------------------------------------------------------------------------------
+Module Introduction
+Apache-Tomcat Versions
+Installation and configuration of Apache-Tomcat
+Hands-on: httpd
+Hands-on: apache-tomcat-9
+Questions and Answers
+-------------------------------------------------------------------------------------------------------------------------------------
+SDLC/DevOps Phase:
+ - Collecting/Gathering Information
+ - Architecture/Prototype
+ - DevOps/SysOps/Admin team
+ - Development Team
+ - QA/Testing Team
+ - Network Team
+ - Security Team
+ - Database Team
+ - Production Team
+ - Support/Maintenance Team
+
+ - Time Constraints for Projects
+ - Respect to customer
+ - Respect to your team/Collebrations 
+ - Share your knowledge
+ - Learning: Tools Knowledge
+    - AWS Services
+    - DevOps Methodologies
+    - Git
+    - GitHub
+    - Jenkins
+    - Apache-Tomcat
+ - Keep in mind about cost of services/tools
+    - Paid resources
+ 
+Prepare Pipeline:
+   QA/Testing Environment
+     - Same as Production
+     - Vesions of tools should be same as production env
+     - Update any thing
+   Production Env
+     - Same as Testing
+     - Vesions of tools should be same as testing env
+     - Update in production too
+
+    
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+=> What is Docker ?
+    - A self-sufficient runtime for containers
+    - It is Containerization
+    - Use Images
+       - Pre-configured templates
+    - Once base virtual machine
+    - Pull rest images
+    - Pull these images from Docker-Hub
+    - Need account in docker-hub
+    - Create/Build your images as per requirement
+    - Host/work with end to end apps/website env
+    - Containers
+       Image of Centos
+       Run this image
+       Look like container
+
+=> Docker File:
+    - Create your own docker file
+    - Modify docker file as per the requirement
+    - Scripts or Code for docker file as per the requirement
+
+5 Developers are working for 1 projects 
+1 Developer is familiar with Amazon Linux
+1 Developer is familiar with RHEL
+1 Developer is familiar with Ubuntu
+1 Developer is familiar with CentOS
+1 Developer is familiar with Suse
+more
+
+
+Q: What if in case some images not available in docker HUB ?
+   We can create/build our own images
+
+Q: sir only cost of resources only differ from docker or any thing else what about perfomances
+   Many more things
+
+
+=> Usecase: Batch-2 VM as Base VM for Docker
+   Hand-on/Practical for Docker
+   Docker Commnads:
+Check Docker Version:
+$ docker -v
+$ docker -version
+$ docker v
+$ docker --version
+Docker version 20.10.7, build f0df350
+
+
+Install Docker:
+$ sudo yum install docker -y
+
+Start Docker Daemon:
+$ sudo docker images
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+$ sudo service docker start
+Redirecting to /bin/systemctl start docker.service
+
+Verify Images in Docker:
+$ sudo docker images
+or
+$ sudo docker image ls
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
+
+Docker Distributed Env/Multiple Docker
+swarm       Manage Swarm
+Activate Swarm
+
+Docker Langauage:
+Go version:       go1.15.14
+2013
+
+Get Information about your docker:
+$ sudo docker info
+
+Base Virtual Machine Version:
+$ cat /etc/system-release
+Amazon Linux release 2 (Karoo)
+
+Pull Docker Image:
+pull        Pull an image or a repository from a registry
+$ sudo docker pull centos
+Using default tag: latest
+latest: Pulling from library/centos
+7a0437f04f83: Pull complete
+Digest: sha256:5528e8b1b1719d34604c87e11dcd1c0a20bedf46e83b5632cdeac91b8c04efc1
+Status: Downloaded newer image for centos:latest
+docker.io/library/centos:latest
+
+$ sudo docker images
+REPOSITORY   TAG       IMAGE ID       CREATED        SIZE
+centos       latest    300e315adb2f   8 months ago   209MB
+
+
+Docker Hub:
+https://hub.docker.com/
+
+
+Working with Container:
+[ec2-user@ip-172-31-40-249 ~]$ cat /etc/system-release
+Amazon Linux release 2 (Karoo)
+[ec2-user@ip-172-31-40-249 ~]$ sudo docker run -it centos
+Note: Intractive Terminal
+[root@53cb36627166 /]# cat /etc/os-release
+NAME="CentOS Linux"
+VERSION="8"
+ID="centos"
+ID_LIKE="rhel fedora"
+VERSION_ID="8"
+PLATFORM_ID="platform:el8"
+PRETTY_NAME="CentOS Linux 8"
+ANSI_COLOR="0;31"
+CPE_NAME="cpe:/o:centos:centos:8"
+HOME_URL="https://centos.org/"
+BUG_REPORT_URL="https://bugs.centos.org/"
+CENTOS_MANTISBT_PROJECT="CentOS-8"
+CENTOS_MANTISBT_PROJECT_VERSION="8"
+[root@53cb36627166 /]# ls
+bin  dev  etc  home  lib  lib64  lost+found  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+[root@53cb36627166 /]#
+
+
+# clear
+bash: clear: command not found
+Issue-2: bash: clear: command not found (Docker Container CentOS-8)
+Solution: #  yum install ncurses
+
+$ sudo docker info
+Client:
+ Context:    default
+ Debug Mode: false
+
+Server:
+ Containers: 1
+  Running: 1
+  Paused: 0
+  Stopped: 0
+ Images: 1
+
+
+Get Information about Coantiners:
+$ sudo docker container ls
+CONTAINER ID   IMAGE     COMMAND       CREATED         STATUS         PORTS     NAMES
+53cb36627166   centos    "/bin/bash"   8 minutes ago   Up 8 minutes             happy_easley
+
+Pull Ubuntu Image:
+$ sudo docker pull ubuntu
+Using default tag: latest
+latest: Pulling from library/ubuntu
+35807b77a593: Pull complete
+Digest: sha256:9d6a8699fb5c9c39cf08a0871bd6219f0400981c570894cd8cbea30d3424a31f
+Status: Downloaded newer image for ubuntu:latest
+docker.io/library/ubuntu:latest
+
+$ sudo docker image ls
+REPOSITORY   TAG       IMAGE ID       CREATED        SIZE
+ubuntu       latest    fb52e22af1b0   28 hours ago   72.8MB
+centos       latest    300e315adb2f   8 months ago   209MB
+
+$ sudo docker images
+REPOSITORY   TAG       IMAGE ID       CREATED        SIZE
+ubuntu       latest    fb52e22af1b0   28 hours ago   72.8MB
+centos       latest    300e315adb2f   8 months ago   209MB
+[ec2-user@ip-172-31-40-249 ~]$ sudo docker container ls
+CONTAINER ID   IMAGE     COMMAND       CREATED          STATUS          PORTS     NAMES
+53cb36627166   centos    "/bin/bash"   11 minutes ago   Up 11 minutes             happy_easley
+
+____________________________________________________________________________________________________________________________________________________
+02-09-2021(Thursday):
+=====================
+Q: 172 .X.X.X B class ?
+Q: how we calculating the default /16 and /20.
+Q: If possible please touch base redshift DB
+Q: 1 q can you please explain HOST zone
+   Will cover in project
+Issue: Status : Failure -Test failed: IO Error: The Network Adapter could not establish the connection 
+                (CONNECTION_ID=cbJwAHGARTKyYr+K71b2Yw==)
+Q: Could you please walk through the ready template ?
+   We will conver in project
+Q: Can u explain about kernals and splunk sir
+Q: what is dforeground?
+Q: Differnce between Poll SCM & GitHub hook trigger for GITScm polling.
+Q: Only cost of resources only differ from docker or any thing else what about perfomances
+   Many more things
+Q: why we are using /bin/bash
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+Module Introduction
+Beyond SDLC
+Key Points for DevOps
+What is Docker ?
+Working with Docker Commands
+What are Images in Docker ?
+What are Container in Docker ?
+Questions and Answers
+--------------------------------------------------------------------------------------------------------------------------------------
+Docker packages software into standardized units called containers that have everything the software needs to run including libraries,
+system tools, code, and runtime. Using Docker, you can quickly deploy and scale applications 
+into any environment and know your code will run.
+or
+Docker is a computer program that performs operating-system-level virtualization, also known as "containerization". It was first 
+released in 2013 and is developed by Docker, Inc. Docker is used to run software packages called "containers"
+Written in: Go
+License: Binaries: Freemium software as a service; Source code: Apache License 2.0
+Stable release: 18.06.1-ce / 22 August 2018
+Operating system: Linux, Windows, macOS
+Initial release: 13 March 2013
+Platforms: x86-64, ARM architecture
+--------------------------------------------------------------------------------------------------------------------------------------
+=> Docker  Components:
+----------------------
+Docker Registry :
+-----------------
+It is storage component for docker images
+We can store the images in either Public/Private repositories
+Docker Hub is Docker’s very own cloud repository.
+
+Use of  Docker Registries :
+---------------------------
+Control where your images are being stored
+
+Docker Images:
+--------------
+Read only template used to create containers
+Build by docker Users
+Stored in Docker Hub
+
+Docker Containers:
+------------------
+Isolated Application Platform
+Contains everything needed to run the application
+Build from one or  more images
+Hands-on: CentOS latest Version
+          
+
+
+Docker Hub:
+https://hub.docker.com/
+
+/var/lib/docker/image/overlay2/layerdb/sha256
+
+$ which docker
+/usr/bin/docker
+[ec2-user@ip-172-31-40-249 ~]$ cd /var/lib/docker/
+[ec2-user@ip-172-31-40-249 docker]$ pwd
+/var/lib/docker
+
+$ ls
+ls: cannot open directory .: Permission denied
+[ec2-user@ip-172-31-40-249 docker]$ sudo -i
+
+Docker image history:
+$ sudo docker history image1
+Inspect : Display detailed information on one or more images
+$ sudo docker image inspect centos
+
+--------------------------------------------------------------------------------------------------------------------------------------
+Introduction to Dockerfile
+Shadab Dockerfile:
+# This is my first docker file
+FROM ubuntu
+
+MAINTAINER shadab akhtar <shadabakhtar97@gmail.com>
+
+RUN apt-get update
+
+CMD ["echo", "This is my first dockerfile"]
+
+$ vim Dockerfile
+[ec2-user@ip-172-31-40-249 ~]$ ls
+apache-tomcat-9.0.52  batch2repo1  Dockerfile  jenkins.war  project1
+[ec2-user@ip-172-31-40-249 ~]$ cat Dockerfile
+# This is my first docker file
+FROM ubuntu
+
+MAINTAINER shadab akhtar <shadabakhtar97@gmail.com>
+
+RUN apt-get update
+
+CMD ["echo", "This is my first dockerfile"]
+
+$ sudo docker build .
+Sending build context to Docker daemon  408.4MB
+Step 1/4 : FROM ubuntu
+ ---> fb52e22af1b0
+Step 2/4 : MAINTAINER shadab akhtar <shadabakhtar97@gmail.com>
+ ---> Running in 277da58de3a5
+Removing intermediate container 277da58de3a5
+ ---> 91414fa09416
+Step 3/4 : RUN apt-get update
+ ---> Running in a9e5e6685b83
+Get:1 http://archive.ubuntu.com/ubuntu focal InRelease [265 kB]
+Get:2 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+Get:3 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Get:4 http://archive.ubuntu.com/ubuntu focal-backports InRelease [101 kB]
+Get:5 http://archive.ubuntu.com/ubuntu focal/restricted amd64 Packages [33.4 kB]
+Get:6 http://archive.ubuntu.com/ubuntu focal/main amd64 Packages [1275 kB]
+Get:7 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [30.1 kB]
+Get:8 http://archive.ubuntu.com/ubuntu focal/universe amd64 Packages [11.3 MB]
+Get:9 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [1037 kB]
+Get:10 http://archive.ubuntu.com/ubuntu focal/multiverse amd64 Packages [177 kB]
+Get:11 http://archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [535 kB]
+Get:12 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [1068 kB]
+Get:13 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [33.4 kB]
+Get:14 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [1479 kB]
+Get:15 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [488 kB]
+Get:16 http://archive.ubuntu.com/ubuntu focal-backports/main amd64 Packages [2668 B]
+Get:17 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [6324 B]
+Get:18 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [790 kB]
+Fetched 18.9 MB in 4s (4983 kB/s)
+Reading package lists...
+
+
+$ sudo docker build . --tag shadabimage:1.0
+Sending build context to Docker daemon  408.4MB
+Step 1/4 : FROM ubuntu
+ ---> fb52e22af1b0
+Step 2/4 : MAINTAINER shadab akhtar <shadabakhtar97@gmail.com>
+ ---> Using cache
+ ---> 91414fa09416
+Step 3/4 : RUN apt-get update
+ ---> Using cache
+ ---> c5bc31bc12a5
+Step 4/4 : CMD ["echo", "This is my first dockerfile"]
+ ---> Using cache
+ ---> b8d20abbddd3
+Successfully built b8d20abbddd3
+Successfully tagged shadabimage:1.0
+[ec2-user@ip-172-31-40-249 ~]$ clear
+
+$ sudo docker login
+Login with your Docker ID to push and pull images from Docker Hub. If you don't have a Docker ID, head over to https://hub.docker.com to create one.
+Username: kunchamtpsdocker
+Password:
+WARNING! Your password will be stored unencrypted in /root/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+
+
+$ sudo -i
+[root@ip-172-31-40-249 ~]# ls -a
+.  ..  .bash_history  .bash_logout  .bash_profile  .bashrc  .cshrc  .docker  .ssh  .tcshrc
+[root@ip-172-31-40-249 ~]# cd .docker/
+[root@ip-172-31-40-249 .docker]# ls
+config.json
+[root@ip-172-31-40-249 .docker]# cat config.json
+{
+        "auths": {
+                "https://index.docker.io/v1/": {
+                        "auth": "a3VuY2hhbXRwc2RvY2tlcjowOTBARG9ja2VyaHViMDkw"
+                }
+        }
+}[root@ip-172-31-40-249 .docker]#
+
+=> Push image from docker to docker-hub:
+----------------------------------------
+$ sudo docker tag centos:latest shadabakhtar/centos:latest
+$ sudo docker push shadabakhtar/centos:latest
+
+$ sudo docker tag shadabimage:1.0 kunchamtpsdocker/shadabimage:1.0
+$ sudo docker push kunchamtpsdocker/shadabimage:1.0
+
+$ sudo docker tag centos:latest kunchamtpsdocker/centos:latest
+$ sudo docker push kunchamtpsdocker/centos:latest
+
+--------------------------------------------------------------------------------------------------------------------------------------
+Building and Tagging Containerizing App
+Mapping with Port
+
+_____________________________________________________________________________________________________________________________________
+03-09-2021(Wednesday):
+=====================
+Q: If possible please touch base redshift DB
+Q: 1 q can you please explain HOST zone
+   Will cover in project
+Issue: Status : Failure -Test failed: IO Error: The Network Adapter could not establish the connection 
+                (CONNECTION_ID=cbJwAHGARTKyYr+K71b2Yw==)
+Q: Could you please walk through the ready template ?
+   We will conver in project
+Q: Can u explain about kernals and splunk sir
+Q: what is dforeground?
+Q: Differnce between Poll SCM & GitHub hook trigger for GITScm polling.
+Q? How many domains DevOps has?
+--------------------------------------------------------------------------------------------------------------------------------------
+Module Summary
+What is Docker?
+What is Docker Architecture?
+How Docker Works?
+What are Docker Images?
+What are Docker Container?
+What are Docker Kernel Primitives?
+What is Docker Namespace?
+What is Docker Control Groups?
+What are Docker Manifests, Layers, Hashes ?
+Working with Docker Build Commands
+Working with Docker Login Command
+Working with Docker Push Command
+--------------------------------------------------------------------------------------------------------------------------------------
+Q: 172 .X.X.X B class ?
+Q? Application is on legacy system, how to move towards containerization?
+--------------------------------------------------------------------------------------------------------------------------------------
+
+Docker Networking 
+Docker Swarm
+
+*************************************************************************************************************************************
+06-09-2021(Monday):
+=====================
+
+Q: Application is in Prod and we wanted to move this application docker without downtime ?
+    how to check the compatibility both the sides
+   migration from legacy to AWS ?
+   AWS Application Migration Service
+
+--------------------------------------------------------------------------------------------------------------------------------------
+Module Summary
+What is Docker?
+What is Docker Architecture?
+How Docker Works?
+What are Docker Images?
+What are Docker Container?
+What are Docker Kernel Primitives?
+What is Docker Namespace?
+What is Docker Control Groups?
+What are Docker Manifests, Layers, Hashes ?
+Working with Docker Build Commands
+Working with Docker Login Command
+Working with Docker Push Command
+--------------------------------------------------------------------------------------------------------------------------------------
+Q: 172 .X.X.X B class ?
+Q? Application is on legacy system, how to move towards containerization?
+   migration from legacy to AWS ?
+   AWS Application Migration Service
+   Database Migration Service
+Q: Application is in Prod and we wanted to move this application docker without downtime ?
+Q: what in case if we are not using cloud service ? and wanted to move the application to docker ?
+   We need docker on on-premise
+
+--------------------------------------------------------------------------------------------------------------------------------------
+Docker Networking
+  - Create network for container 
+Create Network:
+$ sudo docker network create -d bridge --subnet 10.0.0.1/24 kunchamtps-docker-network
+  afcd24d268ae2bc7ad8ac79e80ed9a3461043ff680848d8b196d6edaf36eaed7
+
+$ sudo yum install bridge-utils
+$ brctl show
+bridge name     bridge id               STP enabled     interfaces
+br-75ca4bbb7dee         8000.024296146628       no
+docker0         8000.02420590963d       no
+
+$ sudo docker run -dt --name c1 --network ps-bridge alpine sleep 1d
+
+$ sudo docker run -dt --name c1 --network kunchamtps-docker-network alpine sleep 1d
+Unable to find image 'alpine:latest' locally
+latest: Pulling from library/alpine
+ba3557a56b15: Pull complete
+Digest: sha256:a75afd8b57e7f34e4dad8d65e2c7ba2e1975c795ce1ee22fa34f8cf46f96a3be
+Status: Downloaded newer image for alpine:latest
+6cb5f9bf1d9caad179161f7c47fb3e12eeb2794b1df1ea4794004abc21885246
+$ sudo docker run -dt --name c2 --network ps-bridge alpine sleep 1d
+$ sudo docker run -dt --name c2 --network kunchamtps-docker-network alpine sleep 1d
+159250800c064edc4991b3abebedc339f3c2368ae3a90ac2ca3c243a1339cf66
+--------------------------------------------------------------------------------------------------------------------------------------
+Docker Swarm
+3314
+3602
+3793
+4104
+STP ?
+Spanning Tree Protocol (STP) is a Layer 2 network protocol used to prevent looping within a network topology. STP was created to 
+avoid the problems that arise when computers exchange data on a local area network (LAN) that contains redundant paths.
+what is the usage of alpine ?
+Linux 
+light
+what is the use of network in docker?
+we can our own network
+security purpose
+network means its like get way sir??
+you can say
+
+*************************************************************************************************************************************
+07-09-2021(Tuesday):
+=====================
+Q: If possible please touch base redshift DB
+Q: 1 q can you please explain HOST zone
+   Will cover in project
+Issue: Status : Failure -Test failed: IO Error: The Network Adapter could not establish the connection 
+                (CONNECTION_ID=cbJwAHGARTKyYr+K71b2Yw==)
+Q: Could you please walk through the ready template ?
+   We will conver in project
+Q: Can u explain about kernals and splunk sir
+Q: what is dforeground?
+Q: Differnce between Poll SCM & GitHub hook trigger for GITScm polling.
+Q? How many domains DevOps has?
+Q: What are volumes in docker ?
+Q: difference between Apache and ngnix?
+
+we can use below command to change the host name
+$sudo hostnamectl set-hostname manager
+$sudo hostnamectl set-hostname worker node
+$sudo hostnamectl set-hostname worker node1
+
+i think we need to enable the 2377 port also in security
+
+TCP port 2377 . This port is used for communication between the nodes of a Docker Swarm or cluster.
+
+Q) how the traffic will mange in docker swarm
+Q) how the traffic will move if one of the worker node is down?
+$ sudo docker node rm 1qg4qbn3mo8ylhuzgy87aspdu
+Error response from daemon: rpc error: code = FailedPrecondition desc = node 1qg4qbn3mo8ylhuzgy87aspdu is not down and can't be 
+removed
+
+--------------------------------------------------------------------------------------------------------------------------------------
+Module Summary:
+What is docker Networking ?
+Hands-On: Networking
+ - Create Network for container
+ - Run Container-1 as Alpine Linux in same network
+ - Run Container-2 as Apline Linux in same network
+Questions and Answers
+--------------------------------------------------------------------------------------------------------------------------------------
+Docker Swarm
+  - Manage multiple docker
+  - One Manager node
+  - More than one client node
+
+What is nginx?
+Nginx (pronounced "engine-x") is an open source reverse proxy server for HTTP, HTTPS, SMTP(Simple Mail Transfer Protocol), POP3, and IMAP protocols, as well as a 
+load balancer, HTTP cache, and a web server (origin server). The nginx project started with a strong focus on high concurrency, 
+high performance and low memory usage. It is licensed under the 2-clause BSD-like license and it runs on Linux, BSD variants, Mac OS 
+X, Solaris, AIX, HP-UX, as well as on other *nix flavors. It also has a proof of concept port for Microsoft Windows.
+--------------------------------------------------------------------------------------------------------------------------------------
+Hands-on: Docker Swarm
+
+Prerequisites:
+Docker should be installed on server
+Docker should be start on server
+To Verify Swarm:
+	$ docker info
+Swarm: inactive
+Runtimes: runc
+Default Runtime: runc
+Init Binary: docker-init
+containerd version: 894b81a4b802e4eb2a91d1ce216b8817763c29fb
+runc version: 2b18fe1d885ee5083ef9f0838fee39b62d653e30
+init version: fec3683
+Initialized node as a manager:
+            $ sudo docker swarm init --advertise-addr  <ipaddress>
+
+Example:
+$ sudo docker swarm init --advertise-addr 3.109.182.19
+Swarm initialized: current node (og60jcwv93pe3sl5qecrl8a9e) is now a manager.
+
+To add a worker to this swarm, run the following command:
+
+    docker swarm join --token SWMTKN-1-5txdn14rec6kgmuqlk246ewto5m635doihldhe7wypy8xooswo-a246lq6ldp5rs1a3m9sf7r48z 3.109.182.19:2377
+
+To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
+--------------------------------------------------------------------------------------------------------------------------------------
+=> Worker-Node-1:
+------------------
+Joining a node as a worker in docker swarm:
+            $ sudo docker swarm join -- token <token-id> 
+Issue: Error response from daemon: This node is already part of a swarm. Use "docker swarm leave" to leave this swarm and join 
+another one.
+Solution:
+$ sudo docker swarm leave
+Node left the swarm.
+
+$ sudo docker swarm join --token SWMTKN-1-5txdn14rec6kgmuqlk246ewto5m635doihldhe7wypy8xooswo-a246lq6ldp5rs1a3m9sf7r48z 3.109.182.19:2377
+This node joined a swarm as a worker.
+
+=> Worker-Node-2:
+-----------------
+$ sudo docker swarm join --token SWMTKN-1-5txdn14rec6kgmuqlk246ewto5m635doihldhe7wypy8xooswo-a246lq6ldp5rs1a3m9sf7r48z 3.109.182.19:2377
+This node joined a swarm as a worker.
+--------------------------------------------------------------------------------------------------------------------------------------
+why we are not going RHEL??
+ Any distribution you can select
+
+List of connected nodes:
+        $  sudo docker node ls
+To existing from swarm:
+        $ sudo docker swarm leave
+        $ sudo docker swarm leave –force
+--------------------------------------------------------------------------------------------------------------------------------------
+To remove node:
+        $  sudo docker node rm <node-id>
+Example:
+Remove Worker Node-1:
+Hostname:
+ip-172-31-41-22.ap-south-1.compute.internal
+Id Node-1:
+1qg4qbn3mo8ylhuzgy87aspdu
+        $ sudo docker node rm 1qg4qbn3mo8ylhuzgy87aspdu
+$ sudo docker node rm 1qg4qbn3mo8ylhuzgy87aspdu
+Error response from daemon: This node is not a swarm manager. Worker nodes can't be used to view or modify cluster state. Please run 
+this command on a manager node or promote the current node to a manager.
+
+--------------------------------------------------------------------------------------------------------------------------------------
+To join worker:
+        $ sudo docker swarm join-token worker
+To creating a service:
+        $ sudo docker  service create – replicas <number-of-replicas> -- publish <port-mapping> <image-name>
+        $ sudo docker service create --name web1 --replicas 3 -p 80:80 nginx:latest
+
+*************************************************************************************************************************************
+08-09-2021(Wednesday):
+======================
+
+--------------------------------------------------------------------------------------------------------------------------------------
+Module Summary:
+Prerequisites Docker Swarm
+Undertanding Docker Swarm
+Verify Docker Swarm
+Initialized node as a manager
+Joining a node as a worker in docker swarm
+Verify List of connected nodes
+Working with leave from Docker swarm
+Create a service
+List the all services
+Docker Issues
+What is nginx?
+Hands-on/Practical on Manager Node
+Hands-on/Practical om Worker Node-1
+Hands-on/Practical om Worker Node-2
+Questions and Answers
+--------------------------------------------------------------------------------------------------------------------------------------
+Q: What are volumes in docker ?
+===============================
+* Volumes are the preferred mechanism for persisting data generated by and used by Docker containers
+* Container gets its own nonpersistent storage. It's free, and it comes with every container
+* It is on local block storage managed by the storage driver or the graph driver
+* Linux: var/lib/docker
+* Windows: c:\ProgramData\Docker/windowsfilter
+
+=> Docker Volume Hands-on:
+==========================
+
+  create      Create a volume
+  inspect     Display detailed information on one or more volumes
+  ls          List volumes
+  prune       Remove all unused local volumes
+  rm          Remove one or more volumes
+
+
+To verify docker volume commnad:
+================================
+$ docker volume
+
+To check docker volume:
+=======================
+$ sudo docker volume ls
+
+To create docker volume:
+========================
+$ sudo docker volume create <volume-name>
+Ex:
+$ sudo docker volume create shadab-volume1
+
+To inspect about docker volume:
+===============================
+$ sudo docker volume inspect <volume-name>
+Ex:
+$ sudo docker volume inspect shadab-volume1
+
+To delete docker volume:
+=========================
+$ docker volume rm <volume-name>
+Ex:
+$ docker volume rm shadab-volume1
+
+=> Attaching Volumes to Containers:
+===================================
+Run a new container with a volume:
+==================================
+$ sudo docker container run -dit --name voltest --mount source=ubervol,target=/vol alpine:latest
+aba1c5fc6b08fdc3a1a323beea916d50c7134f5e5c9c4387655f7d0c65260a30
+Note:
+-dit flag: detached intractive
+Source: Name of the actual volume
+target: where the container is mount 
+
+To Verify Volume:
+=================
+$ sudo docker volume ls
+$ sudo ls /var/lib/docker/volumes
+
+
+$ sudo docker container exec -it voltest sh
+/ # ls -l /vo1/
+total 0
+/ # echo " data1" > /v/vo1/
+/ # cat /vo1/file1
+ data1
+
+$ sudo docker container rm voltest -f
+
+$ sudo docker container rm 30e0a7fc8e1d
+Error response from daemon: You cannot remove a running container 30e0a7fc8e1d639ad0974bb0887a45a94c21265e22b22adaab403142ef500cd3. Stop the container before attempting removal or force remove
+[ec2-user@manager ~]$ sudo docker container rm 30e0a7fc8e1d -f
+30e0a7fc8e1d
+
+
+$ sudo docker container run -dit --name voltest1 --mount source=ubervol,target=/apps nginx:latest
+b3b1e0825c13832a21c1efca05250561e9e6e3e143fdb4a8e3e96369bd006e40
+
+$ sudo docker container exec -it voltest1 sh
+# ls -l /apps
+total 4
+-rw-r--r-- 1 root root 7 Sep  7 20:19 file1
+# cat /apps/file1
+ data1
+
+$ sudo docker container exec -it voltest1 sh
+# echo "shadab appened data" >> /apps/file1
+# cat /apps/file1
+ data1
+shadab appened data
+
+$ sudo docker volume rm ubervol
+Error response from daemon: remove ubervol: volume is in use - [8c3c24d4dab1526f304ba1eb8c516ad78a1a9771588ef364037f31ad9847e544]
+
+$ sudo docker container ls
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS          PORTS     NAMES
+8c3c24d4dab1   nginx:latest   "/docker-entrypoint.…"   16 minutes ago   Up 16 minutes   80/tcp    voltest1
+[ec2-user@manager ~]$ sudo docker container rm 8c3c24d4dab1 -f
+8c3c24d4dab1
+
+$ sudo docker volume rm ubervol
+ubervol
+[ec2-user@manager ~]$ sudo docker ls
+docker: 'ls' is not a docker command.
+See 'docker --help'
+[ec2-user@manager ~]$ sudo docker volume ls
+DRIVER    VOLUME NAME
+
+--------------------------------------------------------------------------------------------------------------------------------------
+Q: Difference between Apache and ngnix?
+========================================
+
+=> Apache:                                                         			 
+===========                                        				       
+1) It is mostly used for Unix, Linux, Windows and Solaris platforms  
+2) It was developed by The Apache Software Foundation and Original Author James Duncan Davidson.
+Initially released on 25 March 1999. 
+3) Apache is written in C and XML  
+4) Apache is an open-source web server  
+5) It is designed for web server  
+6) In heavy web traffic, it cannot support multiple requests  
+7) In Apache, there is a dynamic content in web server itself   
+8) Apache’s performance for static content is lower than that of Nginx                          
+
+=> Nginx:
+=========
+1) It is mostly used for Unix like systems, and does not completely support Windows.
+2) It was developed by nginx  and Original Author Igor Sysoev.
+Initially released on 4 October 2004.
+3) Nginx is written in C language
+4) Nginx is a web server. It is also used as a reverse proxy server which revices the request from client and send the request to 
+   proxy server
+5) It is designed for proxy server as well as web server
+6) It can support multiple client requests with limited hardware resources
+7) It does not support provide dynamic content
+8) Nginx’s performance of static content is two times faster than that of Apache as it can simultaneously run thousands of connections
+   and it uses less memory comparatively
+
+=> Note:
+========
+In computer networks, a proxy server is a server (computer) which clients (people or computers) use to access other computers. 
+A proxy server that passes information to its clients without changing it is usually called a gateway or sometimes called 
+tunneling proxy
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+
+we can use below command to change the host name
+$ sudo hostnamectl set-hostname manager
+$ sudo hostnamectl set-hostname worker node
+$ sudo hostnamectl set-hostname worker node1
+
+i think we need to enable the 2377 port also in security
+
+TCP port 2377 . This port is used for communication between the nodes of a Docker Swarm or cluster.
+------------------------------------------------------------------------------------------------------------------------------------
+$ sudo -i
+[root@ip-172-31-40-249 ~]# cd /var/lib/docker/volumes/
+[root@ip-172-31-40-249 volumes]# pwd
+/var/lib/docker/volumes
+[root@ip-172-31-40-249 volumes]# ls
+backingFsBlockDev  metadata.db
+[root@ip-172-31-40-249 volumes]# ls -l
+total 24
+brw------- 1 root root 202, 1 Sep  8 03:56 backingFsBlockDev
+-rw------- 1 root root  32768 Sep  8 03:56 metadata.db
+
+Q: Can you please explain source and taget
+Q: if we delete volumes in source it will effect in target then how will we take backup
+   # cp -r vol1 /home/ec2-user/
+
+Tar command to archive the file :tar -cvf vol.tar  vol
+
+
+*************************************************************************************************************************************
+09-09-2021(Thurday):
+====================
+Previous Session Summary
+What are volumes in docker?
+Docker Volume Hands-on
+Understanding Attaching Volumes to Containers
+Hands-on: Attaching Volumes to Containers
+Run a new container with a volume
+Difference between Apache and ngnix
+Questions and Answers
+--------------------------------------------------------------------------------------------------------------------------------------
+What is Kubernetes ?
+
+* Kubernetes, also known as K8s, is an open source system for managing containerized applications across multiple hosts. 
+  It provides basic mechanisms for deployment, maintenance, and scaling of applications.
+
+* Kubernetes builds upon a decade and a half of experience at Google running production workloads 
+
+Original author(s): Google
+Developer(s): Cloud Native Computing Foundation
+Initial release: 7 June 2014
+Stable release: 1.21 · / April 8, 2021
+Repository: github.com/kubernetes/kubernetes
+Written in: Go
+--------------------------------------------------------------------------------------------------------------------------------------
+Hands-On:
+
+Prerequisites
+You must install and configure the following tools and resources that you need to create and manage an Amazon EKS cluster.
+kubectl – A command line tool for working with Kubernetes clusters. This guide requires that you use version 1.19 or later. 
+To install kubectl on Linux:
+Download the Amazon EKS vended kubectl binary for your cluster's Kubernetes version from Amazon S3. To download the Arm version, 
+change amd64 to arm64 before running the command.
+Kubernetes 1.19:
+$ curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.19.6/2021-01-05/bin/linux/amd64/kubectl
+Verify the downloaded binary with the SHA-256 sum for your binary
+$ curl -o kubectl.sha256 https://amazon-eks.s3.us-west-2.amazonaws.com/1.19.6/2021-01-05/bin/linux/amd64/kubectl.sha256
+Check the SHA-256 sum for your downloaded binary
+$ openssl sha1 -sha256 kubectl
+
+SHA256(kubectl)= 08ff68159bbcb844455167abb1d0de75bbfe5ae1b051f81ab060a1988027868a
+
+Apply execute permissions to the binary.
+$ chmod +x ./kubectl
+Copy the binary to a folder in your PATH. If you have already installed a version of kubectl, then we recommend creating a $HOME/bin/kubectl and ensuring that $HOME/bin comes first in your $PATH.
+$ mkdir -p $HOME/bin && cp ./kubectl $HOME/bin/kubectl && export PATH=$PATH:$HOME/bin
+(Optional) Add the $HOME/bin path to your shell initialization file so that it is configured when you open a shell.
+$ echo 'export PATH=$PATH:$HOME/bin' >> ~/.bashrc
+After you install kubectl , you can verify its version with the following command:
+$ kubectl version --short --client
+--------------------------------------------------------------------------------------------------------------------------------------
+eksctl – A command line tool for working with EKS clusters that automates many individual tasks. This guide requires that you use version 0.38.0 or later. 
+Installing or upgrading eksctl
+This section helps you to install or upgrade the latest version of the eksctl command line utility. 
+To install or upgrade eksctl on Linux using curl
+Download and extract the latest release of eksctl with the following command.
+$ curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
+Move the extracted binary to /usr/local/bin.
+$ sudo mv /tmp/eksctl /usr/local/bin
+Test that your installation was successful with the following command.
+$ eksctl version
+
+--------------------------------------------------------------------------------------------------------------------------------------
+Module Introduction
+In this module, we will cover
+Prerequisites
+Install and configure AWS CLI
+Need python running on your instance/server
+Need Access Key Id
+Need Secrete Access Key
+Need AWS IAM authenticator
+Need eksctl to manage cloud formation
+
+--------------------------------------------------------------------------------------------------------------------------------------
+AWS IAM Authenticator
+To install aws-iam-authenticator on Linux
+Download the Amazon EKS vended aws-iam-authenticator binary from Amazon S3
+$ curl -o aws-iam-authenticator https://amazon-eks.s3.us-west-2.amazonaws.com/1.19.6/2021-01-05/bin/linux/amd64/aws-iam-authenticator
+(Optional) Verify the downloaded binary with the SHA-256 sum provided in the same bucket prefix
+Download the SHA-256 sum for your system. To download the Arm version, change <amd64> to arm64 before running the command
+$ curl -o aws-iam-authenticator.sha256 https://amazon-eks.s3.us-west-2.amazonaws.com/1.19.6/2021-01-05/bin/linux/amd64/aws-iam-authenticator.sha256
+Check the SHA-256 sum for your downloaded binary
+$  openssl sha1 -sha256 aws-iam-authenticator
+Compare the generated SHA-256 sum in the command output against your downloaded aws-iam-authenticator.sha256 file. The two should match
+Apply execute permissions to the binary
+$ chmod +x ./aws-iam-authenticator
+
+SHA256(aws-iam-authenticator)= fe958eff955bea1499015b45dc53392a33f737630efd841cd574559cc0f41800
+
+Copy the binary to a folder in your $PATH. We recommend creating a $HOME/bin/aws-iam-authenticator and ensuring that $HOME/bin comes first in your $PATH
+$ mkdir -p $HOME/bin && cp ./aws-iam-authenticator $HOME/bin/aws-iam-authenticator && export PATH=$PATH:$HOME/bin
+Add $HOME/bin to your PATH environment variable
+$ echo 'export PATH=$PATH:$HOME/bin' >> ~/.bashrc
+Test that the aws-iam-authenticator binary works	
+$ aws-iam-authenticator help
+
+--------------------------------------------------------------------------------------------------------------------------------------	
+Create Repository 
+Create repository:
+$ aws ecr create-repository –repository-name repo1
+Ex:
+$ aws ecr create-repository –repository-name ktps-repo1
+Output:
+$ aws ecr create-repository --repository-name ktps-repo1
+{
+    "repository": {
+        "repositoryUri": "813507914662.dkr.ecr.ap-south-1.amazonaws.com/ktps-repo1",
+        "imageScanningConfiguration": {
+            "scanOnPush": false
+        },
+        "encryptionConfiguration": {
+            "encryptionType": "AES256"
+        },
+        "registryId": "813507914662",
+        "imageTagMutability": "MUTABLE",
+        "repositoryArn": "arn:aws:ecr:ap-south-1:813507914662:repository/ktps-repo1",
+        "repositoryName": "ktps-repo1",
+        "createdAt": 1631185009.0
+    }
+}
+--------------------------------------------------------------------------------------------------------------------------------------	
+Note: save information : "repositoryUri": "503603106942.dkr.ecr.ap-south-1.amazonaws.com/repo1",
+Login to repository:
+--------------------------------------------------------------------------------------------------------------------------------------
+$ aws ecr get-login --region ap-south-1 --no-include-email
+Output:
+docker login -u AWS -p eyJwYXlsb2FkIjoicXNhdUdzaE94Zjk2L2Q1dWZDYjFFc2RFNmt4b1hLQ3pLRWRFbFllc3kva1M0SDBKZzdrd1o4SzJoWVo1NzRyQitaSXIzQW9
+QeEpEUlQ5KzFkYTlIN3J2WXlVNlVXSzNVemFoSXg2UDJ3NkJFdVB2L2FLU3NtV01oeS9HbldoQTdaZHI3WkU3MXBpVmFISldicDF1U0wweFdyOUNtSys4cTBTVForQzZ3NUxpZ
+DFDYkZUUW8vMi9jSFdpMkFzcEY1SXlYTnJ0V3NhTXJmYzVlUDYrcS9DWjVYR2JiNExaVktlcmNoK1NhL3ZkbDd1UnNTaFJkbmQzVU5kNzczK2Y3dVhldlRDUDB0OTRJUm15YWd
+zdnAzajRGRGVPbDFBNkd2MkpNcXRWT2hPQVNsbUN4ZGJzelFsT2lzVnkvZkw5R2N0cWFldElQcnV1dkZ2TTBEUFR2aFdrektIYzdtS3ZoZFBUWHdmbm5BMjFuNkFQVk5rM1FUV
+1RjUjJZR1VmczkxMzVFejg5VEdGQzd1YjNValRnbVg5b05rN0lpU2U4U3NaU3VuemtnSWZ0T3pBdkFnMFBvSlNLbmZDMlNwaUZhMTFZRUg1U1J5cEtKMVhFZFo1eUMrNThTYXM
+4alEzUHRCTzB6M0w5d1FQM2hodnMySGhrM2luLzc5b3pXakR6Vy94c2JneVRFYWNEM1NMK2xvYlFZUTJBYnRsTzh4aVlGMVlQODQwaEVhOW0vckFCN3JaaFBGMjhCUTV0eEVEM
+lhMMStScTFNbzlINWswUlhac1Y4dmlCTE9TaVZSQ3hlQ0RvbGd0NTB6M3ArVmd2QjF0ZmFGOTRCN0VacnpJTUNsZG1Jb2NRZDhUb0lHVGJKVnZwY3BTemFlczNxZjVrZVd5OTIyNFl5SnR0dmR3d3RhcFZnTmRlRzN4VFJmWmMrQnMzZmZMTG1QcUUxbjU3SnVDVGs4VGE0bHNoOG1QVDM1cFhtMTQ1NU1YQUtDMW01eUZvSVQvUjJvRFFDelRvdXR3aW5EMmJweGMvK08wQlhsTkJDOHplQ1NjSFQwU2pPSjlHL3FUeW1zNFhWTjBMTHdwUlgwTXVuUTdZbEQ1aWFHMVRyeGRob1VBOTE2OExTclJkMkJyYVlSSFhMTWt6SEdGVW5iYmZVQTBpRUhQUUJhaEY2eFJFZDBxa045cUI1NkNUQ2ZTcUtjdmJBSzBDeDRJQll3QVA2U2FPWGV4RWxXVnRFUXhIRlJhaCtPT1BraThEL3ZwV25VTW02ai9KNER5UGdHRzJrdjF5OWc5Nk9WVGJPUGNhemZYV1lRb0UrRFB0VDA2bWlITTRCK0pRRVFJTWRNelBOaWdNZit2IiwiZGF0YWtleSI6IkFRSUJBSGlIV2FZVG5SVVdDYm56KzdMdk1HK0FQdlRIekhsQlVROUZxRW1WMjZCZHd3R3JNTjFpVVhqQmQwOFNtZzJXU3FFZkFBQUFmakI4QmdrcWhraUc5dzBCQndhZ2J6QnRBZ0VBTUdnR0NTcUdTSWIzRFFFSEFUQWVCZ2xnaGtnQlpRTUVBUzR3RVFRTVlTNGxsT2lhVDhlTzJ6MnFBZ0VRZ0R1SVZISVlQZ1FRbk1lVWFFL2NKZUFhSUZoWVFVYUluVXBZTnd2amZWZ2ZUNzJDSC81TWUxYjFQZXF4R2pUSTdSN0dnWHQxVWpOMlhHUjZtdz09IiwidmVyc2lvbiI6IjIiLCJ0eXBlIjoiREFUQV9LRVkiLCJleHBpcmF0aW9uIjoxNjMxMjI4NDA4fQ== https://813507914662.dkr.ecr.ap-south-1.amazonaws.com
+
+=> Docker Logout Command: 
+=========================
+
+$ sudo docker logout
+Removing login credentials for https://index.docker.io/v1/
+--------------------------------------------------------------------------------------------------------------------------------------
+Note: Output will be the docker login command
+WARNING! Using --password via the CLI is insecure. Use --password-stdin.
+WARNING! Your password will be stored unencrypted in /root/snap/docker/796/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+--------------------------------------------------------------------------------------------------------------------------------------
+=> Understanding Components, Build and Push:
+============================================
+Syntax:
+<registryid>.dkr.ecr.<region>.amazon.com/<image-name>:<tag>
+Example:
+$ docker build –t 813507914662.dkr.ecr.ap-south-1.amazonaws.com/ktps-repo1:1.0 .
+Ex:
+docker build –t 813507914662.dkr.ecr.ap-south-1.amazonaws.com/ktps-repo1:v1 .
+
+=> Dockerfile:
+# This is my first docker file
+FROM ubuntu
+
+MAINTAINER shadab akhtar <shadabakhtar97@gmail.com>
+
+RUN apt-get update
+
+CMD ["echo", "This is my first dockerfile"]
+
+$ docker build –t 813507914662.dkr.ecr.ap-south-1.amazonaws.com/ktps-repo1:v1 .
+"docker build" requires exactly 1 argument.
+See 'docker build --help'.
+
+Usage:  docker build [OPTIONS] PATH | URL | -
+
+Build an image from a Dockerfile
+[ec2-user@ip-172-31-11-182 ~]$ docker build -t 813507914662.dkr.ecr.ap-south-1.amazonaws.com/ktps-repo1:v1 .
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post "http://%2Fvar%2Frun%2Fdocker.sock/v1.24/build?buildargs=%7B%7D&cachefrom=%5B%5D&cgroupparent=&cpuperiod=0&cpuquota=0&cpusetcpus=&cpusetmems=&cpushares=0&dockerfile=Dockerfile&labels=%7B%7D&memory=0&memswap=0&networkmode=default&rm=1&shmsize=0&t=813507914662.dkr.ecr.ap-south-1.amazonaws.com%2Fktps-repo1%3Av1&target=&ulimits=null&version=1": dial unix /var/run/docker.sock: connect: permission denied
+[ec2-user@ip-172-31-11-182 ~]$ sudo docker build -t 813507914662.dkr.ecr.ap-south-1.amazonaws.com/ktps-repo1:v1 .
+Sending build context to Docker daemon  191.2MB
+Step 1/4 : FROM ubuntu
+latest: Pulling from library/ubuntu
+35807b77a593: Pull complete
+Digest: sha256:9d6a8699fb5c9c39cf08a0871bd6219f0400981c570894cd8cbea30d3424a31f
+Status: Downloaded newer image for ubuntu:latest
+ ---> fb52e22af1b0
+Step 2/4 : MAINTAINER shadab akhtar <shadabakhtar97@gmail.com>
+ ---> Running in 216c10b8b6b4
+Removing intermediate container 216c10b8b6b4
+ ---> c43cc0315790
+Step 3/4 : RUN apt-get update
+ ---> Running in 8e246dc25fc2
+Get:1 http://archive.ubuntu.com/ubuntu focal InRelease [265 kB]
+Get:2 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+Get:3 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Get:4 http://archive.ubuntu.com/ubuntu focal-backports InRelease [101 kB]
+Get:5 http://archive.ubuntu.com/ubuntu focal/universe amd64 Packages [11.3 MB]
+Get:6 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [30.1 kB]
+Get:7 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [791 kB]
+Get:8 http://archive.ubuntu.com/ubuntu focal/multiverse amd64 Packages [177 kB]
+Get:9 http://archive.ubuntu.com/ubuntu focal/main amd64 Packages [1275 kB]
+Get:10 http://archive.ubuntu.com/ubuntu focal/restricted amd64 Packages [33.4 kB]
+Get:11 http://archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [575 kB]
+Get:12 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [1516 kB]
+Get:13 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [33.3 kB]
+Get:14 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [1070 kB]
+Get:15 http://archive.ubuntu.com/ubuntu focal-backports/main amd64 Packages [2668 B]
+Get:16 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [6324 B]
+Get:17 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [1075 kB]
+Get:18 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [529 kB]
+Fetched 19.1 MB in 4s (4997 kB/s)
+Reading package lists...
+Removing intermediate container 8e246dc25fc2
+ ---> 48f31afccfed
+Step 4/4 : CMD ["echo", "This is my first dockerfile"]
+ ---> Running in 43e2a09b98b1
+Removing intermediate container 43e2a09b98b1
+ ---> c4e3d72d4e3a
+Successfully built c4e3d72d4e3a
+Successfully tagged 813507914662.dkr.ecr.ap-south-1.amazonaws.com/ktps-repo1:v1
+--------------------------------------------------------------------------------------------------------------------------------------
+
+$ sudo docker build -t 503603106942.dkr.ecr.ap-south-1.amazonaws.com/repo1:1.0 shadab/.
+Push Image:
+$ sudo docker push 503603106942.dkr.ecr.ap-south-1.amazonaws.com/repo1:1.0
+Ex:
+
+sudo docker push 813507914662.dkr.ecr.ap-south-1.amazonaws.com/ktps-repo1:v1
+*************************************************************************************************************************************
+09-09-2021(Thurday):
+====================
+
+*************************************************************************************************************************************
+14-09-2021(Tuesday):
+====================
+Previous Session Summary
+What is Kubernetes ?
+Prerequisites for Kubernetes
+Preparation for Kubernetes Cluster
+Understanding Kubectl
+Hands-on: on kubectl
+Understanding ekctl
+Hands-on: ekctl
+Understanding IAM Authenticator
+Hands-on: IAM Authenticator
+Understanding about ECR(Elastic Container Registry)
+Hands-on: ECR repository
+
+*************************************************************************************************************************************
+Level - 20: Ansible Deep Dive
+ What is Ansible?
+   - It is configuration management tool
+   - It is push based 
+   - Push configuration from control server to remote servers
+   - Written on Python 
+   - No agent/software required on remote servers
+ Features of Ansible
+   - Big env
+ Push based vs Pull based
+   - Ansible is push based
+   - Chef and Puppet are pull based
+      - agent/software required on remote servers
+ Ansible Architecture
+ What is EPEL?
+   - EPEL stands for Extra Package for Enterprise Linux
+ Why we use EPEL repository?
+   - Free packages
+ How To Enable EPEL Repository in RHEL/CentOS 7/6/5 64 Bit ?
+   - RPM
+   - Install rpm
+
+* Passwordless SSH:
+   - /etc/sudoers : Sudo/Root
+     ## Allow root to run any commands anywhere
+        root    ALL=(ALL)       ALL
+        control ALL=(ALL)       NOPASSWD: ALL
+     ## Same thing without a password
+     # %wheel        ALL=(ALL)       NOPASSWD: ALL
+
+
+   - ssh/sshd_config
+   $ vim /etc/ssh/sshd_config
+   #PermitRootLogin yes
+   PermitRootLogin yes
+   PasswordAuthentication no
+   PasswordAuthentication yes
+
+ - /etc/selinux : Security file in Linux
+
+    # SELINUX= can take one of these three values:
+#     enforcing - SELinux security policy is enforced.
+#     permissive - SELinux prints warnings instead of enforcing.
+#     disabled - No SELinux policy is loaded.
+SELINUX=permissive
+
+Generating Keys:
+$ ssh-keygen
+   - Public keys
+   - Private keys
+
+with out playbook how many node clusters we can manage sir??
+ - Time consuming
+ - Manually process
+
+can we remove the configuration from the 100 node cluster (like removing git from them with ansible)
+ Adhoc or playbook
+
+ansible libraries are not present
+amazon-Linux-extras install ansible2 -y
+
+$ sudo yum install ansible
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+amzn2-core                                                                                                     | 3.7 kB  00:00:00
+No package ansible available.
+Error: Nothing to do
+
+
+ansible is available in Amazon Linux Extra topic "ansible2"
+
+To use, run
+# sudo amazon-linux-extras install ansible2
+
+Learn more at
+https://aws.amazon.com/amazon-linux-2/faqs/#Amazon_Linux_Extras
+
+
+Issue:
+$ ssh-copy-id remote@ip-172-31-15-151.ap-south-1.compute.internal
+/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/home/control/.ssh/id_rsa.pub"
+The authenticity of host 'ip-172-31-15-151.ap-south-1.compute.internal (172.31.15.151)' can't be established.
+ECDSA key fingerprint is SHA256:tZkjgX/tjw00t3zltDM1u683KoRZnTbsfsoPgwmzUA8.
+ECDSA key fingerprint is MD5:e3:bf:2d:b8:b6:04:75:00:f6:72:04:a7:75:66:e4:2c.
+Are you sure you want to continue connecting (yes/no)? yes
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+Permission denied (publickey,gssapi-keyex,gssapi-with-mic).
+Solution:
+$ sudo service sshd restart
+
+If we have 100's of remote servers we have to follow the same steps
+*************************************************************************************************************************************
+15-09-2021(Wednesday):
+====================
+ Previous Session Summary:
+ What is Ansible?
+ Features of Ansible
+ Push based vs Pull based
+ Ansible Architecture
+ Understanding Passwordless SSH with Control and Remote Servers
+ Hands-On: Passwordless SSH with Control and Remote Servers
+--------------------------------------------------------------------------------------------------------------------------------------
+Original author(s)	Michael DeHaan
+Developer(s)	Ansible Community / Ansible Inc. / Red Hat Inc.
+Initial release	February 20, 2012; 9 years ago
+Stable release	
+2.11.3[1] Edit this on Wikidata / 20 July 2021; 53 days ago
+Repository	
+github.com/ansible/ansible.git Edit this at Wikidata
+Written in	Python, PowerShell, Shell, Ruby
+Operating system	Linux, Unix-like, MacOS, Windows
+Available in	English
+Type	Configuration management, infrastructure as code (IaC), Orchestration engine
+License	Proprietary / GNU General Public License
+Website	www.ansible.com 
+--------------------------------------------------------------------------------------------------------------------------------------
+What is EPEL
+EPEL (Extra Packages for Enterprise Linux) is open source and free community based repository project from Fedora team which provides 100% high quality add-on software packages for Linux distribution including RHEL (Red Hat Enterprise Linux), CentOS, and Scientific Linux.
+Why we use EPEL repository?
+Provides lots of open source packages to install via Yum.
+Epel repo is 100% open source and free to use.
+It does not provide any core duplicate packages and no compatibility issues.
+All epel packages are maintained by Fedora repo.
+How To Enable EPEL Repository in RHEL/CentOS 7/6/5 64 Bit ?
+AWS AMI-RHEL-7.6_HVM_BETA-20180814-x86_64-0-Hourly2-GP2 - ami-006b2db4ca7e39d7d
+# wget http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm 
+# rpm -ivh epel-release-latest-7.noarch.rpm
+# yum install ansible
+--------------------------------------------------------------------------------------------------------------------------------------
+=> Hands-on: Passwordless SSH on control server and remote servers:
+====================================================================
+[ec2-user@ip-172-31-11-182 ~]$ sudo vim /etc/sudoers
+[ec2-user@ip-172-31-11-182 ~]$ sudo vim /etc/ssh/sshd_config
+[ec2-user@ip-172-31-11-182 ~]$ sudo vim /etc/selinux/config
+[ec2-user@ip-172-31-11-182 ~]$ su control
+Password:
+[control@ip-172-31-11-182 ec2-user]$ cd
+[control@ip-172-31-11-182 ~]$ ssh-keygen
+[control@ip-172-31-11-182 ~]$ ssh-copy-id remote@dns
+
+
+
+=> Download rpm, Installation, Setup and configuration:
+=======================================================
+$ sudo yum install ansible -y
+[control@ip-172-31-11-182 etc]$ find ansible
+ansible
+ansible/ansible.cfg
+
+Inventory:
+ansible/hosts
+ - We can keep information about remote server here
+   Ex: remote@dns
+       
+ansible/roles
+--------------------------------------------------------------------------------------------------------------------------------------
+Ansible AD-HOC commands
+AD-HOC
+An ad-hoc command is something that you might type into do something really quick, don’t want to save later
+Ping  the machine:
+ansible remote -m ping
+Example: 
+ansible remoteservers -m ping
+
+Ping all the machine:
+ansible all -m ping 
+To get remote server information:
+ansible all -m shell -a  "df -h“
+To get details of hosts:
+ansible all -m setup
+To Check remote server Ipv-4 Information:
+ansible all -m setup -a "filter=*ip*“
+To check free memory in hosts
+ansible all -m setup -a "filter=*mem*
+To install git:
+ansible all -m yum -a “name=git status=latest”
+To create a file:
+ansible all -m shell -a “touch /home/ec2/ file1.txt“
+Or
+ansible -v targethostname -m shell -a "mkdir /srv/www" -u targetuser
+Or
+ansible -v remote -m shell -a "mkdir /srv/www" -u remote2
+
+To verify files:
+ansible all -m shell -a “ls –l /home/ec2/ file1.txt“
+
+[control@ip-172-31-11-182 ~]$ ansible remoteservers -m shell -a "mkdir /home/remote/batch-1-&-2"
+[WARNING]: Consider using the file module with state=directory rather than running 'mkdir'.  If you need to use command because file
+is insufficient you can add 'warn: false' to this command task or set 'command_warnings=False' in ansible.cfg to get rid of this
+message.
+[WARNING]: Platform linux on host remote@13.233.150.29 is using the discovered Python interpreter at /usr/bin/python, but future
+installation of another Python interpreter could change this. See
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for more information.
+remote@13.233.150.29 | FAILED | rc=127 >>
+/bin/sh: -2: command not foundnon-zero return code
+Solution:
+/home/remote/shadab-dir
+--------------------------------------------------------------------------------------------------------------------------------------
+Introduction to Ansible Playbook?
+=> Understanding Playbooks:
+===========================
+Playbooks are Ansible configuration, deployment and orchestration language
+Playbooks can be used to manage configurations of and deployments to remote machines
+Playbooks instruct action to hosts
+It is also used for interaction with monitoring servers
+It is also used for interaction with load balancer
+Playbooks are designed to be human-readable and are developed in a basic text language
+--------------------------------------------------------------------------------------------------------------------------------------
+Hands-on: Playbooks
+Test yaml script:
+http://www.yamllint.com/
+
+=> Ansible playbook Testing:
+============================
+-When ever playbook has been executed ansible checks the syntax, if there is any 
+error the playbook won’t be executed.
+1. - - syntax-check
+- To check syntax errors manually the command is 
+# ansible-playbook <playbook.yml> --syntax-check
+Example:
+ansible-playbook playbook1.yml --syntax-check
+
+2.- - check
+-its dry run of the playbook, like ‘noop’ in puppet.
+#ansible-playbook <playbook.yml> --check
+
+=> Running a playbook:
+======================
+$ ansible-playbook create.yml
+$ ansible-playbook playbook1.yml
+
+TASK [copy_task] *********************************************************************************************************************
+
+fatal: [remote@13.233.150.29]: FAILED! => {"changed": false, "checksum": "7bb164230db391fc0aef304f5a9a0ceccc06ea44", "msg": "Aborting,
+target uses selinux but python bindings (libselinux-python) aren't installed!"}
+
+Solution:
+Need to install on control and remote servers:
+
+$ sudo yum install libselinux-python -y
+
+=> Playbook-2:
+==============
+
+#vi service.yml
+---
+- hosts: 192.168.242.133
+ user: root
+ tasks:
+ - name: install_http
+ action: yum name=http state=installed
+ - name: copy_index.html
+ copy: src=files/index.html dest=/var/www/html/index.html
+ - name: start_httpd
+ service:
+ name: httpd
+ state: restarted
+Ansible playbook Testing
+*************************************************************************************************************************************
+16-09-2021(Thursday):
+======================
+Previous Session Summary
+Understanding ad-hoc commands
+Hands-on: ad-hoc commands
+Understanding Inventory Hosts
+Hands-on: Inventory Hosts
+Understanding Playbook Syntax
+Hands-on: Playbook Syntax
+Understanding Playbook
+Hands-on: Playbook 
+Working with ansible issues
+Questions and Answers
+--------------------------------------------------------------------------------------------------------------------------------------
+Understading playbooks tasks
+Understading Validation of playbook
+Hands-on: creating user via playbook
+How to install apache-tomcat via playbook ?
+Understanding ansible automation with public and private ip-addresses
+How to change Linux User Password ?
+What is Nagios ?
+=====================================================================================================================================
+# Playbook-1: Copy Tasks
+---
+ - hosts: remote@172.31.38.247
+   vars:
+    welcome_msg: 'In 20 minutes i want to reboot servers'
+   tasks:
+   - name: copy_task
+     copy:
+      dest: /home/remote/deepak/file1.py
+      content: "{{welcome_msg}}"
+
+Hands-on: Success
+
+=====================================================================================================================================
+# Playbook-2: Creating new users
+---
+- name: New User is Created
+  hosts: remote@13.233.150.29
+
+  tasks:
+    - name: User Gets Created
+      user:
+        name: batch1
+        state: present
+
+Hands-on: Success
+=====================================================================================================================================
+# Playbook-3: Installation of Apache-Tomcat
+---
+- name: Installation of Apache-Tomcat
+  hosts: remote@13.233.150.29
+  become: true
+  tasks:
+    - name: Install httpd package
+      yum: name=httpd state=latest
+    - name: Start httpd Service
+      service: name=httpd state=restarted
+Hands-on: Success
+=====================================================================================================================================
+# Playbook-4: Stop Apache-Tomcat
+---
+- name: Installation of Apache-Tomcat
+  hosts: remote@13.233.150.29
+  become: true
+  tasks:
+    - name: Install httpd package
+      yum: name=httpd state=latest
+    - name: Start httpd Service
+      service: name=httpd state=stopped
+
+=====================================================================================================================================
+
+Q: My question is if user is attempted 3 times it got locked and how admin will reset the password or how admin will unlock the 
+password
+
+Q: What is the importance of elastic IP address, can we elastic IP address In prod
+
+Q: how to create the multiple host files in ansible and is it possible to create the own host file ?
+
+
+Issue:
+[WARNING]: Could not match supplied host pattern, ignoring: remote@13.233.150.29
+
+playbook: pb2-createuser.yml
+
+Solution:
+keep correct ip address for remote server
+
+
+Issue:
+$ ansible-playbook pb2-createuser.yml
+
+PLAY [New User is Created] ***********************************************************************************************************
+
+TASK [Gathering Facts] ***************************************************************************************************************
+[WARNING]: Platform linux on host remote@172.31.15.151 is using the discovered Python interpreter at /usr/bin/python, but future
+installation of another Python interpreter could change this. See
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for more information.
+ok: [remote@172.31.15.151]
+
+TASK [User Gets Created] *************************************************************************************************************
+fatal: [remote@172.31.15.151]: FAILED! => {"changed": false, "cmd": "/sbin/useradd -m batch1", "msg": "[Errno 13] Permission denied", "rc": 13}
+
+PLAY RECAP ***************************************************************************************************************************
+remote@172.31.15.151       : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0
+
+Solution:
+become: ture
+
+Q: apache tomcat and apache webserver both are differnent
+by Madhusudhan
+
+Issue:
+TASK [Start httpd Service] ***********************************************************************************************************
+fatal: [remote@3.109.121.16]: FAILED! => {"changed": false, "msg": "value of state must be one of: reloaded, restarted, started, 
+stopped, got: stop"}
+
+PLAY RECAP ***************************************************************************************************************************
+remote@3.109.121.16        : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0
+
+*************************************************************************************************************************************
+20-09-2021(Monday):
+===================
+Required Source Code for Static Website
+Soruce Code
+ * Index.html
+
+Required S3 Bucket
+ * Need Public Access
+
+Required DNS form AWS
+ * AWS S3 Default Endpoint
+ * Own DNS from AWS
+
+www.kunchamtpsblogs.com
+
+First Name : kuncham
+Last Name : tps
+Email : shadabakhtar97@gmail.com
+Contact: 9148627170
+Address: Parmanent Address
+
+=> Managing DNS for Your New Domain:
+=====================================
+https://aws.amazon.com/route53/pricing/
+
+=> Do you want to automatically renew your domain?:
+===================================================
+https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-renew.html
+
+=> Terms and Conditions:
+========================
+https://aws.amazon.com/route53/domain-registration-agreement/
+
+
+
+Domain includes the Http or https ?
+ S3 static website configuration
+
+------------------------------------------------------------------------------------------------------------------------------------
+Static website hosting
+Use this bucket to host a website or redirect requests. Learn more
+Edit
+Static website hosting
+Enabled
+Hosting type
+Bucket hosting
+
+=> Bucket website endpoint:
+============================
+When you configure your bucket as a static website, the website is available at the AWS Region-specific website endpoint of the bucket. Learn more
+
+http://kunchamtpsstaticwebsitehosting.s3-website.ap-south-1.amazonaws.com
+
+------------------------------------------------------------------------------------------------------------------------------------
+Issue:
+403 Forbidden
+Code: AccessDenied
+Message: Access Denied
+RequestId: K8ZKJWMYZ8B2ZER8
+HostId: mVcf0aJ3+RUNEaGQGMhS6lUzNZZp/dfeXZOI3X/F0aHjaA5fmTAu9kHvkG0g3TJVpcq0YCoc40o=
+An Error Occurred While Attempting to Retrieve a Custom Error Document
+Code: AccessDenied
+Message: Access Denied
+
+Solution:
+Check Public for Objects and Bucket
+------------------------------------------------------------------------------------------------------------------------------------
+=> Own Domain Hosting:
+======================
+Static website hosting
+Use this bucket to host a website or redirect requests. Learn more
+Edit
+Static website hosting
+Enabled
+Hosting type
+Redirect request
+Bucket website endpoint
+When you configure your bucket as a static website, the website is available at the AWS Region-specific website endpoint of the bucket
+. Learn more
+
+http://kunchamtpsstaticwebsitehosting.s3-website.ap-south-1.amazonaws.com
+
+https://www.kunchamtpsblogs.com
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+Wt is diff b/w http and https??
+
+For Hosting Static Website's we don't need VM??
+ No need
+
+------------------------------------------------------------------------------------------------------------------------------------
+https://www.kunchamtpsblogs.com
+Hosting in Mumbai
+Edge location
+
+------------------------------------------------------------------------------------------------------------------------------------
+Mumbai:
+
+S3 Bucket should be Public
+Upload Source Code in S3 Bucket and your objects should be public
+Configure Static Website 
+ * Endpoint provided by AWS
+    - Index.html
+    - error.html
+
+Route-53:
+ * Own Domain name: www.kunchamtpsblogs.com
+
+Cloud Front:
+ * Origin as S3 Bucket
+ * Website will be available on edge location
+
+*************************************************************************************************************************************
+21-09-2021(Tuesday):
+====================
+Previous Module Summary
+Required Source Code for Static Website
+Soruce Code
+ * Index.html
+
+Required S3 Bucket
+ * Need Public Access
+
+Required DNS form AWS
+ * AWS S3 Default Endpoint
+ * Own DNS from AWS
+
+www.kunchamtpsblogs.com
+Amount: 1040.53 INR
+------------------------------------------------------------------------------------------------------------------------------------
+Issue: 
+Not able to access website
+Solution:
+
+To resolve this issue, perform the following steps:
+
+If there's no public hosted zone that has the same name as the domain, create one. For more information, see Creating a Public Hosted
+Zone in the Amazon Route 53 Developer Guide.
+
+Get the name servers for the new hosted zone. See Getting the Name Servers for a Public Hosted Zone.
+Update the domain to use the name servers that you got in step 2. See Adding or Changing Name Servers and Glue Records for a Domain.
+
+
+Hosted zones
+Automatic mode is the current search behavior optimized for best filter results
+
+
+Public hosted zone
+A public hosted zone determines how traffic is routed on the internet.
+
+------------------------------------------------------------------------------------------------------------------------------------
+=> Project-2: Wordpress Blog:
+=============================
+
+Sample templates
+This collection of sample templates will help you get started with AWS CloudFormation and quickly build your own templates
+
+Output:
+WebsiteURL	http://ec2-13-127-68-146.ap-south-1.compute.amazonaws.com/wordpress	WordPress Website
+
+Welcome
+Welcome to the famous five-minute WordPress installation process! Just fill in the information below and you’ll be on your way to 
+using the most extendable and powerful personal publishing platform in the world.
+
+Information needed
+
+Site Title: Kunchamtps Blogs
+Username: Admin
+Your Email: kunchamtpsshadab@gmail.com
+Password: AE84#H&QcsgUp5J8Pb
+------------------------------------------------------------------------------------------------------------------------------------
+=> Amazon Linux:
+=================
+
+$ cat /etc/system-release
+Amazon Linux AMI release 2018.03
+
+$ cd /var/www/html/wordpress
+
+$ sudo chmod -R 777 www
+
+$ curl ifconfig.com
+<html><head><title>Error 406 - Not Acceptable</title><head><body><h1>Error 406 - Not Acceptable</h1><p>Generally a 406 error is 
+caused because a request has been blocked by Mod Security. If you believe that your request has been blocked by mistake please 
+contact the web site owner.
+</p></body></html>
+
+*************************************************************************************************************************************
+23-09-2021(Tuesday):
+===================================
+Q: If possible please touch base redshift DB
+Q: 1 q can you please explain HOST zone(Done)
+
+Issue: Status : Failure -Test failed: IO Error: The Network Adapter could not establish the connection 
+                (CONNECTION_ID=cbJwAHGARTKyYr+K71b2Yw==)
+Q: Could you please walk through the ready template ?(Done)
+Q: Can u explain about kernals and splunk sir
+Q: Differnce between Poll SCM & GitHub hook trigger for GITScm polling.
+Q) how the traffic will mange in docker swarm
+Q) how the traffic will move if one of the worker node is down?
+
+$ sudo docker node rm 1qg4qbn3mo8ylhuzgy87aspdu
+Error response from daemon: rpc error: code = FailedPrecondition desc = node 1qg4qbn3mo8ylhuzgy87aspdu is not down and can't be 
+removed
+AppDynamics sir ?
+
+Sir What is Shell Scripting?? Where Will We Use Shell scripting
+
+Issue:
+$ sudo docker push 813507914662.dkr.ecr.ap-south-1.amazonaws.com/ktps-repo1:v1
+The push refers to repository [813507914662.dkr.ecr.ap-south-1.amazonaws.com/ktps-repo1]
+cbd7815af83c: Preparing
+4942a1abcbfa: Preparing
+no basic auth credentials
+
+what is minikube cluster ?
+
+Create Kubernetes cluster:
+$ eksctl create cluster --name demo-cluster --region ap-south-1 --zones ap-south-1a,ap-south-1b,ap-south-1c
+In Projects
+
+
+
+is there any difference b/w REST API and API
+
+Q: Ansible logs or events
+
+Q: Differences between S3 and snowball ?
+------------------------------------------------------------------------------------------------------------------------------------
+Project-1: Static Website Hosting
+
+Root Domain Bucket: kunchantpsblogs.com
+Subdomaint Bucket: www.kunchamtpsblogs.com
+bucket for logging: logs.kunchamtpsblogs.com 
+
+Q: I am using outside URL and it is on legacy server how do I migrate to Route53 ?
+Q: Error document ?
+   One of page in source code
+   Optional for configuration
+   Error.html
+   Cutom error massage
+
+Website Endpoint:
+http://kunchamtpsblogs.com.s3-website.ap-south-1.amazonaws.com
+s3-website.ap-south-1.amazonaws.com.
+s3-website.ap-south-1.amazonaws.com.
+
+Q: Can we redirect to new URL ?
+   www.kunchamtpsblogs.com
+
+Q: Is There any option to exchange domain once we parches
+   No 
+------------------------------------------------------------------------------------------------------------------------------------
+Choose routing policy
+
+Routing policies let you choose how Route 53 routes traffic to you resources. If you have multiple resources that perform the 
+same operation, such as serve content for a website, choose a routing policy other than simple. Here's a brief comparison:
+
+Simple: Simple records use standard DNS functionality.
+
+Weighted: Weighted records let you specify what portion of traffic to send to each resource.
+
+Geolocation: Geolocation records let you route traffic to your resources based on the geographic location of your users.
+
+Latency: Latency records let you route traffic to resources in the AWS Region that provides the lowest latency. All resources must 
+be in AWS Regions.
+
+Failover: Failover records let you route traffic to a resource when the resource is healthy or to a different resource when the 
+first resource is unhealthy.
+
+Multivalue answer: Multivalue answer records let you configure Route 53 to return multiple values, such as IP addresses for your web
+ servers, in response to DNS queries.
+
+------------------------------------------------------------------------------------------------------------------------------------
+Configure records
+
+Each record in a hosted zone defines how you want Route 53 to respond to DNS queries. You can specify the settings for multiple 
+records and then create them all at one time.
+
+This is especially useful when you create multiple records that have a routing policy other than simple because you can specify the 
+name, type, and TTL just once. You also can review the record values, such as IP addresses or weights, before you create the records.
+------------------------------------------------------------------------------------------------------------------------------------
+
+Bucket policy
+The bucket policy, written in JSON, provides access to the objects stored in the bucket. Bucket policies don't apply to objects owned
+ by other accounts
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicReadGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::kunchamtpsblogs.com/*"
+        }
+    ]
+}
+
+
+Q: sir I don't know this is the crct wat im saying,
+Q: in s3 go again for statuc website hosting
+Q: after selecting http
+
+
+*************************************************************************************************************************************
+24-09-2021(Friday):
+====================
+
+
+what are the day to day activities of devops engineer ?
+ CICD management
+ Infrastructure Management
+
+DevOps/SysOps/Admin/Operations
+
+DevOps Support and DevOps Engineer ?
+ 10 
+ 
+7 CICD management
+  Infrastructure Management
+   - Launching Instance
+   - Installation and Configuration 
+     Ex: chef/puppet/ansible/saltstak
+   - CICD pipeline preparations
+   - Deploy Projects in pipleline
+
+3 Giving Support
+
+How companies keep/manage there projects ?
+Usecase
+Architecture
+
+Docker
+EB
+S3 with Cloud Front
+EC2
+CICD
+=====
+source code dev machine
+tranfer this source code to AWS Cloud
+git
+push to github
+Jenkins
+deploy code to server
+
+Q: to practice first project do you we need to purchase domain separately sir..
+www.sumiyablogs.com
+
+------------------------------------------------------------------------------------------------------------------------------------
+Need Java Source Code 
+Need Amazon Linux VM 
+ - Linux/4.14.243-185.433.amzn2.x86_64 botocore/1.18.6
+ - Public IP: 13.232.160.12
+Need Git
+ - git version 2.32.0
+Need Jenkins:
+Password: 8e61a9c7d3d04ec1a2e71d8aca5a1027
+------------------------------------------------------------------------------------------------------------------------------------
+Need Apache-Tomcat
+ - apache-tomcat-9.0.53 
+Need to Open Port:
+Security Group: 8080
+
+Running Tomcat:
+bin$ ./startup.sh
+
+$ ps -ef|grep apache
+ec2-user  3934     1 36 05:01 pts/1    00:00:03 /usr/bin/java -Djava.util.logging.config.file=/home/ec2-user/apache-tomcat-9.0.53/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /home/ec2-user/apache-tomcat-9.0.53/bin/bootstrap.jar:/home/ec2-user/apache-tomcat-9.0.53/bin/tomcat-juli.jar -Dcatalina.base=/home/ec2-user/apache-tomcat-9.0.53 -Dcatalina.home=/home/ec2-user/apache-tomcat-9.0.53 -Djava.io.tmpdir=/home/ec2-user/apache-tomcat-9.0.53/temp org.apache.catalina.startup.Bootstrap start
+ec2-user  3953  3504  0 05:01 pts/1    00:00:00 grep --color=auto apache
+
+=> Manaullay Deploy war file from Apache GUI:
+=============================================
+Manager App:
+
+Issue: for Credentials:
+=======================
+
+403 Access Denied
+You are not authorized to view this page.
+
+By default the Manager is only accessible from a browser running on the same machine as Tomcat. If you wish to modify this restriction, you'll need to edit the Manager's context.xml file.
+
+If you have already configured the Manager application to allow access and you have used your browsers back button, used a saved book-mark or similar then you may have triggered the cross-site request forgery (CSRF) protection that has been enabled for the HTML interface of the Manager application. You will need to reset this protection by returning to the main Manager page. Once you return to this page, you will be able to continue using the Manager application's HTML interface normally. If you continue to see this access denied message, check that you have the necessary permissions to access this application.
+
+If you have not changed any configuration files, please examine the file conf/tomcat-users.xml in your installation. That file must contain the credentials to let you use this webapp.
+
+For example, to add the manager-gui role to a user named tomcat with a password of s3cret, add the following to the config file listed above.
+
+<role rolename="manager-gui"/>
+<user username="tomcat" password="s3cret" roles="manager-gui"/>
+Note that for Tomcat 7 onwards, the roles required to use the manager application were changed from the single manager role to the following four roles. You will need to assign the role(s) required for the functionality you wish to access.
+
+manager-gui - allows access to the HTML GUI and the status pages
+manager-script - allows access to the text interface and the status pages
+manager-jmx - allows access to the JMX proxy and the status pages
+manager-status - allows access to the status pages only
+The HTML interface is protected against CSRF but the text and JMX interfaces are not. To maintain the CSRF protection:
+
+Users with the manager-gui role should not be granted either the manager-script or manager-jmx roles.
+If the text or jmx interfaces are accessed through a browser (e.g. for testing since these interfaces are intended for tools not humans) then the browser must be closed afterwards to terminate the session.
+For more information - please see the Manager App How-To.
+
+
+Solution:
+/home/ec2-user/apache-tomcat-9.0.53/conf
+
+Set Username and Password for Manager App:
+===========================================
+vim tomcat-users.xml
+
+<!--
+  <role rolename="tomcat"/>
+  <role rolename="role1"/>
+  <user username="tomcat" password="<must-be-changed>" roles="tomcat"/>
+  <user username="both" password="<must-be-changed>" roles="tomcat,role1"/>
+  <user username="role1" password="<must-be-changed>" roles="role1"/>
+-->
+
+Important Configuration
+=====================================================
+For Manually deployed war file from “Manager App” configure in file:
+===================================================================
+
+/home/ec2-user/apache-tomcat-9.0.53/webapps/manager/META-INF
+context.xml
+
+From Tomcat version 8 onward's, manager/html url won't be accessible to anyone except localhost.
+In order to access /manager/html url, you need to do below change in context.xml of manager app. 1. Go to /apache-tomcat-8.5.23/webapps/manager/META-INF location, then edit context.xml
+<Context antiResourceLocking="false" privileged="true" > 
+<Valve className="org.apache.catalina.valves.RemoteAddrValve" allow="^.*$" /> ...... </Context>
+
+Important Configuration
+=====================================================
+Setting up “username” and “password” for apache-tomcat
+tomcat-users.xml (for tomcat-8)
+========================
+<role rolename="admin-gui"/>
+<role rolename="manager-gui"/>
+  <role rolename="manager-script"/>
+  <role rolename="manager-jmx"/>
+  <role rolename="manager-status"/>
+  <user username="admin" password="admin" roles=" admin-gui, manager-gui,manager-script,manager-jmx,manager-status"/>
+=======================================================
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+=> Transfer Source Code from Laptop to EC2 VM:
+==============================================
+WinSCP
+
+
+*************************************************************************************************************************************
+27-09-2021(Monday):
+====================
+Source Code Management
+===========================
+The git plugin provides fundamental git operations for Jenkins projects. It can poll, fetch, checkout, and merge contents of git 
+repositories.
+
+The git plugin provides an SCM implementation to be used with the Pipeline SCM checkout step. The Pipeline Syntax Snippet Generator 
+guides the user to select git plugin checkout options and provides online help for each of the options.
+
+https://github.com/shadabakhtar79864/batch3-projec3.git
+
+Need Deploy to Container Plugins
+================================
+
+
+Post-build Actions:
+===================
+Deploy war/ear to a container(apache-tomcat)
+War/ear files to deploy. Relative to the workspace root. You can also specify Ant-style GLOBs, like "**/*.war"
+
+**/*.war
+
+The context path:
+=================
+that the container should use to publish the WAR/EAR. Note that this may get overridden if the WAR/EAR to deploy 
+has container-specific configuration embedded inside.
+
+SampleWebApp
+
+Containers:
+===========
+apache-tomcat-9.0.53
+username admin
+password *****
+
+
+Tomcat URL:
+=============
+The Tomcat base URL to use for deployment (e.g. https://tomcat.my-company.com:8443).
+
+http://65.0.32.19:8181
+
+
+Issue:
+ERROR: Couldn't find any revision to build. Verify the repository and branch configuration for this job.
+[DeployPublisher][INFO] Build failed, project not deployed
+Finished: FAILURE
+
+*************************************************************************************************************************************
+28-09-2021(Tuesday):
+====================
+Q: what is dforeground?
+Answer: 
+dforeground is Linux process
+A process when you start from the terminal by default runs as a foreground process
+In Linux, if you execute any programs a process will be created with a unique ID (PID) and by default, the process runs in the 
+foreground
+Let’s take a simple curl command – when you send a request to download a zip file over the internet, curl will run as a foreground 
+process and all the outputs will be displayed in the terminal
+[ec2-user@manager ~]$ sleep 10000
+^C
+[ec2-user@manager ~]$ sleep 10000
+^Z
+[1]+  Stopped                 sleep 10000
+[ec2-user@manager ~]$ jobs -l
+[1]+  3242 Stopped                 sleep 10000
+[ec2-user@manager ~]$ fg %2
+sleep 30000
+Note: The value "30000" here indicates "30 seconds" of sleep
+------------------------------------------------------------------------------------------------------------------------------------
+Q: Difference between $ sudo su - xyz and $ su - xyz
+
+The Difference Between sudo and su Explained:
+=============================================
+
+sudo: execute a command as another user
+=======================================
+flag: -i, --login
+the sudo option can only be used by users who belong to the sudoers group
+
+su: Run a command with substitute user and group ID
+====================================================
+The main syntax is:
+
+su [user_name]
+or
+su - [user_name]
+------------------------------------------------------------------------------------------------------------------------------------
+What is nagios ?
+ - It is continous monitoring tool
+
+“The Industry Standard In IT Infrastructure Monitoring”
+
+It is Open Source system and network monitoring application
+It watches hosts and services that you specify, alerting you when things go bad and when they get better
+It was originally designed to run under Linux
+
+Some of the many features of Nagios include
+=========================================================
+Monitoring of network services (SMTP, POP3, HTTP, NNTP, PING, etc.)
+Monitoring of host resources (processor load, disk usage, etc.)
+Simple plugin design that allows users to easily develop their own service checks Parallelized service checks
+Ability to define network host hierarchy using "parent" hosts, allowing detection of and distinction between hosts that are down and
+ those that are unreachable
+Contact notifications when service or host problems occur and get resolved (via email, pager, or user-defined method)
+Ability to define event handlers to be run during service or host events for proactive problem resolution Automatic log file 
+rotation
+Support for implementing redundant monitoring hosts
+Optional web interface for viewing current network status, notification and problem history, log file, etc
+
+Installation and configuration of Nagios3 on Ubuntu Server
+=============================================
+Lunch Ubuntu Server and connect with server
+ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-20210415
+Update Ubuntu server:
+	$ sudo apt-get update
+Install Nagios3 on Ubuntu Server:
+	$ sudo apt-get install nagios3
+Give password to Nagios3
+Verify Apache on browser:
+	http://server-ip-address
+Verify Nagios on browser:
+	http://server-ip-address/nagios
+Note: Username will be fixed as “nagiosadmin”
+
+Play with nagios3.cfg file
+=============================================
+After installation Nagios3 on server, “nagios.cfg” will present into “etc directory” :
+	$ sudo nano /etc/nagios3/nagios.cfg
+
+if we hit sudo su - xyz will it take root password or user password ?
+Please show us where we need to add new servers?
+------------------------------------------------------------------------------------------------------------------------------------
+Terraform:
+==========
+https://en.wikipedia.org/wiki/Terraform_(software)
+
+Original author(s)	Mitchell Hashimoto et al.
+Developer(s)	HashiCorp
+Initial release	28 July 2014; 7 years ago
+Stable release	
+1.0.0 / 8 June 2021; 3 months ago[1]
+Repository	
+github.com/hashicorp/terraform Edit this at Wikidata
+Written in	Go
+Operating system	Linux, FreeBSD, macOS, OpenBSD, Solaris, and Microsoft Windows
+Available in	English
+Type	Infrastructure as code
+License	Mozilla Public License v2.0[2]
+Website	www.terraform.io 
+
+Terraform has four major commands:
+
+$ terraform init
+$ terraform plan
+$ terraform apply
+$ terraform destroy
+
+Terraform is a tool for building, changing, and versioning infrastructure safely and efficiently. Terraform can manage existing and 
+popular service providers as well as custom in-house solutions.
+
+The key features of Terraform are:
+
+Infrastructure as Code: Infrastructure is described using a high-level configuration syntax. This allows a blueprint of your 
+datacenter to be versioned and treated as you would any other code. Additionally, infrastructure can be shared and re-used.
+
+Execution Plans: Terraform has a "planning" step where it generates an execution plan. The execution plan shows what Terraform will 
+do when you call apply. This lets you avoid any surprises when Terraform manipulates infrastructure.
+
+Resource Graph: Terraform builds a graph of all your resources, and parallelizes the creation and modification of any non-dependent 
+resources. Because of this, Terraform builds infrastructure as efficiently as possible, and operators get insight into dependencies 
+in their infrastructure.
+
+Change Automation: Complex changesets can be applied to your infrastructure with minimal human interaction. With the previously 
+mentioned execution plan and resource graph, you know exactly what Terraform will change and in what order, avoiding many possible
+ human errors.
+
+Issue:
+PS C:\Windows\system32> terraform
+terraform : The term 'terraform' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the
+name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ terraform
++ ~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (terraform:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+Solution:
+==========
+Suggestion [3,General]: The command terraform was not found, but does exist in the current location. Windows PowerShell does not load commands from the current location by default. If you trust this command, instead type: ".\terraform". See "get-help about_Command_Precedence" for more details.
+PS D:\D Old Drive\2021\Software-2021> .\terraform.exe
+------------------------------------------------------------------------------------------------------------------------------------
+Download Terraform:
+===================
+https://www.terraform.io/downloads.html
+
+*************************************************************************************************************************************
+30-09-2021(Thursday):
+======================
+The Difference Between sudo and su Explained
+What is dforeground?
+What is nagios?
+Some of the many features of Nagios include
+Installation and configuration of Nagios3 on Ubuntu Server
+Understanding Terraform
+Terraform has four major commands:
+$ terraform init
+$ terraform plan
+$ terraform apply
+$ terraform destroy
+------------------------------------------------------------------------------------------------------------------------------------
+Course prerequisites
+VSCodeUserSetup-x64-1.60.2
+------------------------------------------------------------------------------------------------------------------------------------
+Terraform / Cloud Formation
+Senario
+AWS Provider
+Environment Varialbles
+------------------------------------------------------------------------------------------------------------------------------------
+=> Understanding Terraform Registry:
+=====================================
+Discover Terraform providers that power all of Terraform’s resource types, or find modules for quickly deploying common infrastructure
+configurations
+
+Security group with predefined rules:
+=====================================
+module "web_server_sg" {
+  source = "terraform-aws-modules/security-group/aws//modules/http-80"
+
+  name        = "web-server"
+  description = "Security group for web-server with HTTP ports open within VPC"
+  vpc_id      = "vpc-12345678"
+
+  ingress_cidr_blocks = ["10.10.0.0/16"]
+}
+------------------------------------------------------------------------------------------------------------------------------------
+Working with main.tf
+
+##################################################################################
+# VARIABLES
+##################################################################################
+
+variable "aws_access_key" {}
+variable "aws_secret_key" {}
+variable "private_key_path" {}
+variable "key_name" {}
+variable "region" {
+  default = "us-east-1"
+}
+
+##################################################################################
+# PROVIDERS
+##################################################################################
+
+provider "aws" {
+  access_key = var.aws_access_key
+  secret_key = var.aws_secret_key
+  region     = var.region
+}
+
+##################################################################################
+# DATA
+##################################################################################
+
+data "aws_ami" "aws-linux" {
+  most_recent = true
+  owners      = ["amazon"]
+
+  filter {
+    name   = "name"
+    values = ["amzn-ami-hvm*"]
+  }
+
+  filter {
+    name   = "root-device-type"
+    values = ["ebs"]
+  }
+
+  filter {
+    name   = "virtualization-type"
+    values = ["hvm"]
+  }
+}
+
+
+##################################################################################
+# RESOURCES
+##################################################################################
+
+#This uses the default VPC.  It WILL NOT delete it on destroy.
+resource "aws_default_vpc" "default" {
+
+}
+
+resource "aws_security_group" "allow_ssh" {
+  name        = "nginx_demo"
+  description = "Allow ports for nginx demo"
+  vpc_id      = aws_default_vpc.default.id
+
+  ingress {
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+  ingress {
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = -1
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+}
+
+resource "aws_instance" "nginx" {
+  ami                    = data.aws_ami.aws-linux.id
+  instance_type          = "t2.micro"
+  key_name               = var.key_name
+  vpc_security_group_ids = [aws_security_group.allow_ssh.id]
+
+  connection {
+    type        = "ssh"
+    host        = self.public_ip
+    user        = "ec2-user"
+    private_key = file(var.private_key_path)
+
+  }
+
+  provisioner "remote-exec" {
+    inline = [
+      "sudo yum install nginx -y",
+      "sudo service nginx start"
+    ]
+  }
+}
+
+##################################################################################
+# OUTPUT
+##################################################################################
+
+output "aws_instance_public_dns" {
+  value = aws_instance.nginx.public_dns
+}
+
+------------------------------------------------------------------------------------------------------------------------------------
+Terraform Download Option:
+==========================
+https://www.terraform.io/downloads.html
+
+
+*************************************************************************************************************************************
+30-09-2021(Thursday):
+======================
+Course prerequisites
+Getting Started with Terraform
+Core Concepts
+Infrastructure as Code Benefits
+Differences between Cloud Formation and Terraform
+AWS provider
+Understanding Terraform Registry
+Automating Infrastructure
+What is scenario ?
+Terraform “Hello World”
+Terraform Components
+Service Cost Alert
+Terraform Hands-On
+Module Summary
+*************************************************************************************************************************************
+03-09-2021(Sunday):
+======================
+# Configure the AWS Provider
+provider "aws" {
+  region = "us-east-1"
+}
+
+# Create a VPC
+resource "aws_vpc" "example" {
+  cidr_block = "10.0.0.0/16"
+}
+------------------------------------------------------------------------------------------------------------------------------------
+
+while cloning git hub with git...one repository will under another repository sir what is  the mistake sir
+
+------------------------------------------------------------------------------------------------------------------------------------
+   provider "aws" {
+    access_key = "AKIA322GZVOTMRWFSZ4K"
+    secret_key = "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"
+    region = "ap-south-1"
+    }
+
+------------------------------------------------------------------------------------------------------------------------------------
+$ terraform
+
+Initializing provider plugins...
+- Finding latest version of hashicorp/aws...
+- Installing hashicorp/aws v3.61.0...
+- Installed hashicorp/aws v3.61.0 (signed by HashiCorp)
+
+Terraform has created a lock file .terraform.lock.hcl to record the provider  
+selections it made above. Include this file in your version control repository
+so that Terraform can guarantee to make the same selections by default when   
+you run "terraform init" in the future.
+
+
+Terraform has been successfully initialized!
+
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.
+
+
+PS D:\E Old Drive\P2-2021\KunchamTPS-2021\KuchamTPS Batches-2021\sm2> terraform validate
+Success! The configuration is valid.
+
+PS D:\E Old Drive\P2-2021\KunchamTPS-2021\KuchamTPS Batches-2021\sm2> terraform plan
+
+Issue:
+╷
+│ Error: Error launching source instance: Blocked: This account is currently blocked and not recognized as a valid account. 
+Please contact aws-verification@amazon.com if you have questions.
+│       status code: 400, request id: 6a29fce5-35d0-4ca1-847d-6adbe229d989
+│
+│   with aws_instance.web,
+│   on main.tf line 9, in resource "aws_instance" "web":
+│    9:     resource "aws_instance" "web" {
+
+*************************************************************************************************************************************
+04-09-2021(Monday):
+===================
+# Prerequites
+# Need terraform.exe
+# Need Set environment variable for terraform.exe
+# Verify terraform
+# Need AWS Account
+# Need AWSAccessKeyId and secret_key
+# Need AWS provider terraform script
+# Need AWS region name
+# Create AWS Ec2 Instance via terraform script
+# terraform init
+# terraform validate
+# terraform plan
+# terraform apply
+# terraform detroy
+
+*************************************************************************************************************************************
+10-10-2021(Sunday):
+===================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
